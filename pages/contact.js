@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '../components/layout';
+import utilStyles from '../styles/utils.module.css';
 
 export default function NewPost() {
   return (
@@ -11,15 +12,15 @@ export default function NewPost() {
         <form action='/api/contact' method='POST'>
           <p>
             <label htmlFor="name">Name</label>
-            <input name="name" id="name" />
+            <input className={utilStyles.width100} name="name" id="name" />
           </p>
           <p>
-            <label htmlFor="email">Email:</label>
-            <input type="email" name="email" id="email" />
+            <label htmlFor="email">Email</label>
+            <input className={utilStyles.width100} required type="email" name="email" id="email" />
           </p>
           <p>
             <label htmlFor="message">Message</label>
-            <textarea name="message" id="message"></textarea>
+            <textarea className={utilStyles.width100} required name="message" id="message"></textarea>
           </p>
           <p>
             <button>Save</button>
